@@ -1,0 +1,43 @@
+Ótimo que tenha funcionado! Agora, sempre que você fizer alterações no seu código e quiser subir essas mudanças para o GitHub, siga estes passos:
+
+1. **Faça as alterações no seu código:**
+   Abra o seu projeto no VSCode e faça as alterações necessárias nos arquivos.
+
+2. **Adicione as alterações ao staging area:**
+   Execute o comando `git add .` para adicionar todas as alterações ao staging area.
+
+   ```bash
+   git add .
+   ```
+
+   Se você quiser adicionar apenas arquivos específicos, substitua `.` pelos nomes dos arquivos.
+
+3. **Faça o commit das alterações:**
+   Execute o comando `git commit -m "Descrição das alterações"` para fazer um commit das suas alterações.
+
+   ```bash
+   git commit -m "Adiciona novas funcionalidades"
+   ```
+
+   Certifique-se de fornecer uma mensagem de commit significativa que descreva as mudanças que você fez.
+
+4. **Envie as alterações para o GitHub:**
+   Execute o comando `git push` para enviar as alterações para o GitHub.
+
+   ```bash
+   git push
+   ```
+
+   Isso fará o push das alterações para o branch que você configurou anteriormente (geralmente `master` ou `main`).
+
+Agora, suas alterações estarão refletidas no repositório remoto no GitHub. Repita esses passos sempre que fizer alterações no código e quiser atualizar o repositório remoto.
+
+Lembre-se de que é uma boa prática sempre atualizar o seu repositório local antes de fazer alterações para evitar conflitos. Para fazer isso, você pode usar o comando:
+
+```bash
+git pull origin master
+```
+
+Esse comando traz as alterações do repositório remoto para o seu repositório local antes de você fazer novas alterações.
+
+Espero que isso ajude! Se tiver mais dúvidas, estou aqui para ajudar.

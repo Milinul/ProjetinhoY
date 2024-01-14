@@ -1,0 +1,77 @@
+.loginPage .container .formDiv .form .inputDiv .icon {
+    color: var(--greyText);
+}
+
+.loginPage .container .formDiv .form .inputDiv input {
+    background: none;
+    outline: none;
+    border: none;
+    width: 200px;
+}
+
+.loginPage .container .formDiv .form .inputDiv label {
+    color: var(--blackColor);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.loginPage .container .formDiv .form .inputDiv .input {
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--inputColor2);
+    border-radius: 10px;
+}
+
+.loginPage .container .formDiv .form .btn {
+    padding: 0.8rem;
+    background: var(--primaryColor);
+    border-radius: 10px;
+    color: var(--whiteColor);
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    font-size: 16px;
+    width: 100%;
+    gap: 0.5rem;
+    transition: 0.3s ease;
+}
+
+.loginPage .container .formDiv .form .buttonDiv {
+    margin-top: 1.5rem;
+}
+
+
+.loginPage .container .formDiv .form .btn .icon {
+    font-size: 25px;
+    transition: 0.3s ease;
+}
+
+.loginPage .container .formDiv .form .btn:hover {
+    background: var(--hoverColor);
+    color: var(--blackColor);
+}
+
+.message {
+  display: none;
+}
+
+.showMessage {
+  display: block;
+  color: var(--whiteColor);
+  padding: 10px;
+  background: rgb(255, 46, 46);
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1.5rem;
+
+  opacity: 0;
+  animation: showMessageFade 0.5s forwards ease-out;
+}
+
+@keyframes showMessageFade {
+  to {
+      opacity: 1;
+  }
+}

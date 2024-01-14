@@ -1,0 +1,35 @@
+#isso aqui é uma ferramenta chamada vite na qual vc pode
+selecionar o framework que quer usar, e qual linguagem
+e a partir disso ela cria o basico pra voce + um server localhost
+
+npm create vite@latest .
+
+#rodar na pasta client
+
+npm run dev
+
+os comandos npm são a partir do NODE JS, precisa instalar ele
+
+App.scss é onde fica o css principal
+
+2 Pastas principais
+
+client - frontend
+server - backend
+
+foram criadas 2 telas, uma para login e outra para registro e uma de dashboard
+
+'react-router-dom'basicamente é uma biblioteca do react para fazer as trocas de tela
+
+pack de icons do react: npm install react-icons
+pagina de icons do react: https://react-icons.github.io/react-icons/
+
+npm init, cria um json com algumas infos para o diretorio
+
+npm install mysql express cors, instalando o mysql
+
+npm install axios, instala uma API para conectar ao banco
+
+para rodar o banco: cd server, node index.js // NÃO ESQUECER DE LIGAR O XAMPP
+
+comentarios { /* */ } ou /* */
