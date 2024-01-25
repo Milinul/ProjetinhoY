@@ -35,7 +35,7 @@ const LoginFormInputBtn = () =>{
         }
 
         // Faz uma requisição para o servidor com as credenciais fornecidas
-        Axios.post('http://localhost:3002/login', {
+        Axios.post('http://localhost:3030/login', {
             loginuserName: loginuserName,
             loginpassword: loginpassword
         }).then((response) => {

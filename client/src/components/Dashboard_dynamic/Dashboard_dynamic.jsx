@@ -9,31 +9,36 @@ export default function DashboardDynamic() {
   const [activeCard, setActiveCard] = useState(null);
 
   const getDashboardData = () => {
-    Axios.get(`http://localhost:3002/dashboard/${id_ala}`)
-        .then((response) => {
-            setDashboardData(response.data);
-        })
-        .catch((error) => {
-            console.error('Erro ao obter dados do dashboard dinâmico:', error);
-        });
+    Axios.get(`http://localhost:3030/dashboard/${id_ala}`)
+      .then((response) => {
+        console.log('Response data:', response.data); // Verifique os dados recebidos
+        setDashboardData(response.data);
+      })
+      .catch((error) => {
+        console.error('Erro ao obter dados do dashboard dinâmico:', error);
+      });
   };
-
+  
   useEffect(() => {
+    console.log('id_ala:', id_ala); // Verifique se id_ala está definido corretamente
     getDashboardData();
   }, [id_ala]);
+  
+  console.log('dashboardData:', dashboardData); // Verifique o estado após a atualização
+  
 
   return (
     <div className="App">
       <h1>Patient Information</h1>
-      {dashboardData.map((patient) => (
+      {dashboardData.map((patient, index) => (
         <div
-          key={patient.id}
+          key={index}
           className={`collapsible-card ${
-            activeCard === patient.id ? "active" : ""
+            activeCard === index ? "active" : ""
           }`}
           onClick={() =>
             setActiveCard((prev) =>
-              prev === patient.id ? null : patient.id
+              prev === index ? null : index
             )
           }
         >
@@ -43,9 +48,8 @@ export default function DashboardDynamic() {
               <span>{`Age: ${patient.idade} years old`}</span>
               <span>{`Blood Type: ${patient.tipo_sanguineo}`}</span>
               <span>{`Situation: ${patient.situacao}`}</span>
-              <span>{`Bed: ${patient.leito}`}</span>
-              <span>{`Wing: ${patient.ala}`}</span>
-              <span>{`TESTE DA VIEW: ${patient.test}`}</span>
+              <span>{`Bed: ${patient.leitos}`}</span>
+              <span>{`Wing: ${patient.nome_ala}`}</span>
             </div>
           </div>
           <div className="content">
